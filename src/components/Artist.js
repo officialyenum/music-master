@@ -3,7 +3,7 @@ import React from 'react';
 const Artist = ({artist}) => {
     const { images, name, followers, genres } = artist;
     return (
-        <div className="row align-items-center mt-5 ">
+        <div className="row align-items-center mt-5 mb-5 ">
             <div className="col">
             </div>
             <div className="col">

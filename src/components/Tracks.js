@@ -28,17 +28,14 @@ class Tracks extends Component {
 
                                 return (
                                     <div 
+                                        className="track"
                                         onClick={this.playAudio(preview_url)}
                                         key={id} 
                                         style={{ display:'inline-block', width:300, margin:5 }}>
                                         <img  
                                             src={album.images[0].url && album.images[0].url} 
                                             alt="artist-profile"
-                                            style={{
-                                                width:200,
-                                                height:200,
-                                                borderRadius:100
-                                            }}
+                                            className="track-image"
                                         />
                                         <p>{name}</p>
                                     </div> 

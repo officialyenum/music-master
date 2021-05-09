@@ -25,4 +25,20 @@ h1,h2,h3,h4,h5 {
     color: whitesmoke;
 }
 
+.track {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+    cursor: pointer;
+}
+
+.track-image {
+    width: 250px;
+    height: 250px;
+    border-radius: 20px;
+    box-shadow: 2 #21252A;
+}
+
 /*# sourceMappingURL=/src.e31bb0bc.css.map */

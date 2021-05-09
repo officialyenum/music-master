@@ -32295,7 +32295,7 @@ var Artist = function Artist(_ref) {
       followers = artist.followers,
       genres = artist.genres;
   return /*#__PURE__*/_react.default.createElement("div", {
-    className: "row align-items-center mt-5 "
+    className: "row align-items-center mt-5 mb-5 "
   }, /*#__PURE__*/_react.default.createElement("div", {
     className: "col"
   }), /*#__PURE__*/_react.default.createElement("div", {
@@ -32438,6 +32438,7 @@ var Tracks = /*#__PURE__*/function (_Component) {
             album = track.album,
             preview_url = track.preview_url;
         return /*#__PURE__*/_react.default.createElement("div", {
+          className: "track",
           onClick: _this2.playAudio(preview_url),
           key: id,
           style: {
@@ -32448,11 +32449,7 @@ var Tracks = /*#__PURE__*/function (_Component) {
         }, /*#__PURE__*/_react.default.createElement("img", {
           src: album.images[0].url && album.images[0].url,
           alt: "artist-profile",
-          style: {
-            width: 200,
-            height: 200,
-            borderRadius: 100
-          }
+          className: "track-image"
         }), /*#__PURE__*/_react.default.createElement("p", null, name));
       }));
     }
@@ -32662,6 +32659,11 @@ var App = /*#__PURE__*/function (_Component) {
   }
 
   _createClass(App, [{
+    key: "componentDidMount",
+    value: function componentDidMount() {
+      this.searchArtist('wizkid');
+    }
+  }, {
     key: "render",
     value: function render() {
       return /*#__PURE__*/_react.default.createElement("div", null, /*#__PURE__*/_react.default.createElement("h2", null, "Music Master"), /*#__PURE__*/_react.default.createElement(_Search.default, {
@@ -32669,7 +32671,7 @@ var App = /*#__PURE__*/function (_Component) {
       }), this.state.artist != null ? /*#__PURE__*/_react.default.createElement(_Artist.default, {
         key: this.state.artist.id,
         artist: this.state.artist
-      }) : null, this.state.tracks.length > 0 ? /*#__PURE__*/_react.default.createElement(_Tracks.default, {
+      }) : null, /*#__PURE__*/_react.default.createElement("h3", null, "Top Ten Tracks"), this.state.tracks.length > 0 ? /*#__PURE__*/_react.default.createElement(_Tracks.default, {
         key: this.state.tracks.id,
         tracks: this.state.tracks
       }) : null);
